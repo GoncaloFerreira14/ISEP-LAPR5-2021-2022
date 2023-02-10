@@ -1,0 +1,18 @@
+
+.form-forca {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .form-lista {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+
+  h1{
+    text-align: center;
+    padding: 20px 0 20px 0;
+    color: #2980b9;
+  }

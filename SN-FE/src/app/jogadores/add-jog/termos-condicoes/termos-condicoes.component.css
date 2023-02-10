@@ -1,0 +1,106 @@
+* {box-sizing: border-box}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  height: 100%;
+  position: relative;
+}
+
+.title{
+    justify-content: center;
+    text-align: center;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.mat-form-field {
+  width: 100%;
+  margin: 0px 0px 10px 0px;
+  display: inline-block;
+  border: none;
+  font-size: 16px
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.button_others{
+  width: 50%;
+  height: 50px;
+  margin-top: 2%;
+  margin: auto;
+  text-align: center;
+  border: 1px solid;
+  background: #2691d9;
+  border-radius: 25px;
+  font-size: 18px;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+
+.button_others:hover{
+  border-color: #2691d9;
+  transition: .5s;
+}
+
+.button_others:disabled {
+  background-color:#797979;
+  color: rgb(31, 31, 31);
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: no-drop;
+  width: 100%;
+  opacity: 0.3;
+}
+
+.mat-expansion-panel {
+  margin-left: 16px;
+}
+
+.box {
+  width:auto;
+  height:250px;
+  line-height:3em;
+  overflow:auto;
+  padding:5px;
+  border-style:solid;
+  border-width:1px;
+}
+
+p{
+  margin:0;
+  padding:0px 0px 1px 0px;
+  text-align: justify;
+}
+.tab{
+  padding-left: 30px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.tab2{
+  padding-left: 65px;
+  text-align: justify;
+}
+
+.tab3{
+  padding-left: 95px;
+  text-align: justify;
+}

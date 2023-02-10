@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.mat-sort-header-container {
+    align-items: center;
+  }
+
+  table {
+    width: 100%;
+  }
+  ul {
+    list-style-type:none;
+    font-size: medium;
+}
+
+li span{
+    display: block;
+    padding: 1%;
+}
+
+li p{
+    display: inline-flex;
+    padding: 1%;
+}
+
+li b{
+    padding-right: 5px;
+}
+
+button {
+    margin: 1%;
+}
+  h1{
+    padding-top:1.5%;
+    padding-inline-start: 40px;
+    margin-left: 0.5%;
+    color: #2980b9;
+  }

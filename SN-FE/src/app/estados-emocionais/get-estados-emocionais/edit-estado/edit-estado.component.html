@@ -1,0 +1,28 @@
+<body>
+  <h2>EDITAR ESTADO EMOCIONAL</h2>
+<form class = "form" [formGroup]="editForm" (ngSubmit)="editEstado()">
+<div>
+    <div class="select">
+        <label for="estadoHumor">
+          <b> Estado de Humor: </b>
+        </label>
+        <select name="estadoHumor" id="estadoHumor" formControlName="estadoHumor">
+            <option value="joyful"><b>Joyful</b></option>
+            <option value="distressed"><b>Distressed</b></option>
+            <option value="hopeful"><b>Hopeful</b></option>
+            <option value="fearful"><b>Fearful</b></option>
+            <option value="relieved"><b>Relieved</b></option>
+            <option value="disappointed"><b>Disappointed</b></option>
+            <option value="proud"><b>Proud</b></option>
+            <option value="remorseful"><b>Remorseful</b></option>
+            <option value="grateful"><b>Grateful</b></option>
+            <option value="angry"><b>Angry</b></option>
+            <option value="neutral"><b>Neutral</b></option>
+          </select>
+        </div>
+        <button mat-raised-button type="submit"><b>Editar Estado</b></button>
+        <mat-divider></mat-divider>
+  </div>
+</form>
+</body> 
+      

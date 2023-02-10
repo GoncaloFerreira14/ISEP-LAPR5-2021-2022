@@ -1,0 +1,21 @@
+<body>
+  <div class="center">
+    <h1 class="register">Pesquisar Jogadores</h1>
+    <form class="form" [formGroup]="pesqForm" (ngSubmit)="onSubmit()">
+
+      <div class="geral">
+
+
+        <div class="txt_field">
+          <label for="pesquisa">Pesquisa :</label>
+          <input id="pesquisa" type="text" formControlName="pesquisa">
+        </div>
+      </div>
+    </form>
+
+    <div class="bottom_buttons">
+      <button class="button" type="submit" (click)="onSubmit()">Pesquisar</button>
+    </div>
+
+  </div>
+</body>

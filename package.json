@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "nodemon": "^2.0.15",
+    "three": "^0.135.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.134.0"
+  },
+  "scripts": {
+    "start": "vue init"
+  }
+}

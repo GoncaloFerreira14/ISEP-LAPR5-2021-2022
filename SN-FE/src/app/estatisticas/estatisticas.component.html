@@ -1,0 +1,37 @@
+<h1>Estatisticas:</h1>
+<mat-form-field appearance="fill">
+  <mat-label>Escolha uma leaderboard</mat-label>
+  <mat-select [(value)]="selectedLeader">
+    <mat-option value="dimensao" (click)=changeSelectedLeader()>Leaderboard Dimensão</mat-option>
+    <mat-option value="fortaleza" (click)=changeSelectedLeader()>Leaderboard Fortaleza</mat-option>
+  </mat-select>
+</mat-form-field>
+<div *ngFor="let item of resDimensao ; index as i">
+  {{i + 1}} - Nome: <b>{{item.nome}}</b> e Dimensão: <b>{{item.dimensao}}</b>
+</div>
+<div *ngFor="let item of resFortaleza ; index as i">
+  {{i + 1}} - Nome: <b>{{item.nome}}</b> e Fortaleza: <b>{{item.fortaleza}}</b>
+</div>
+
+<!-- <table mat-table [dataSource]="empData">
+  <ng-container matColumnDef="fortalezaRede">
+    <th mat-header-cell *matHeaderCellDef> Fortaleza da Rede </th>
+    <td mat-cell *matCellDef="let emp"> {{emp}} </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let emprow; columns: displayedColumns;"></tr>
+</table> -->
+<mat-card>Fortaleza da rede: {{fortalezaRede}}</mat-card>
+<mat-card>Tamanho da rede até 3º nível: {{amigos3Nivel}}</mat-card>
+<mat-form-field appearance="fill">
+  <mat-label>Escolha uma cloud</mat-label>
+  <mat-select [(value)]="selected">
+    <mat-option value="jogadores" (click)=changeSelected()>CloudTag Jogadores</mat-option>
+    <mat-option value="dataTagsRelacoes" (click)=changeSelected()>CloudTag Relações</mat-option>
+    <mat-option value="jogador" (click)=changeSelected()>CloudTag Jogador</mat-option>
+    <mat-option value="relacoesjog" (click)=changeSelected()>CloudTag Relações Jogador</mat-option>
+  </mat-select>
+</mat-form-field>
+<angular-tag-cloud [config]="options" [data]="data"></angular-tag-cloud>
+
+

@@ -1,0 +1,20 @@
+<div>
+    <h1 class="title">Resultados da Pesquisa:</h1>
+  
+    <ul class="pesquisados">
+      <li *ngFor="let jogador of pesquisados">
+        <span class="badge"></span>
+        <p> <b>Nome:</b> {{jogador.nome}}</p>
+        <p> <b>Descrição:</b> {{jogador.descricaoBreve}}</p>
+        <p> <b>Data de Nascimento:</b> {{jogador.dataNascimento}}</p>
+        <p> <b>E-Mail:</b> {{jogador.email}}</p>
+        <p> <b>Telefone:</b> {{jogador.numeroTelefone}}</p>
+        <p> <b>Pais:</b> {{jogador.pais}}</p>
+        <p> <b>Cidade:</b> {{jogador.cidade}}</p>
+        <p> <b>Tags:</b> {{jogador.listaTags}}</p>
+        <br>
+        <button mat-raised-button (click)="adicionar(jogador)">Enviar Pedido</button>
+        <mat-divider></mat-divider>
+      </li>
+    </ul>
+  </div>

@@ -1,0 +1,40 @@
+<!--<div>
+<div>
+    <label for="forca">
+      Força de ligação: 
+    </label>
+    <input id="forca" type="text" >
+  </div>
+  <div>
+    <label for="lista">
+      Lista de tags (Divida as tags com uma vírgula): 
+    </label>
+    <br>
+    <textarea id="lista" type="text">
+
+    </textarea>
+  </div>
+  <button (click) = "editRelacao()"
+        class="m-1 btn btn-light  btn-outline-primary" Button>
+        Enviar
+        </button>
+</div>-->
+
+<h1>Editar Relação:</h1>
+
+<div>
+  <form class="form-forca">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Força de ligação</mat-label>
+      <input matInput placeholder="0-100" id="forca" >
+    </mat-form-field>
+  
+    <mat-form-field class="form-lista" appearance="fill">
+      <mat-label>Lista de tags (divida por vírgulas)</mat-label>
+      <textarea matInput placeholder="Ex. Carros,Java" id="lista"></textarea>
+    </mat-form-field>
+  </form>
+  <button mat-stroked-button (click)= "editRelacao()">Editar</button>
+</div>
+
+  

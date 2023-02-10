@@ -1,0 +1,16 @@
+<h1>Estado Emocional</h1>
+<div>
+  <ul class="estados-emocionais">
+    <li *ngFor="let estado of estadoList">
+      <span class="badge"></span> 
+      <p><b>Estado:</b> {{estado.estadoHumor}}</p>
+      <p><b>Última alteração:</b> {{estado.data}}</p>
+      <p><b>Valor:</b> {{estado.valorEstado}}</p>
+       <br>
+         <button mat-raised-button (click) = "setEstado(estado)"><b>Editar Estado</b></button>
+         <mat-divider></mat-divider>
+    </li>
+  </ul>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,46 @@
+image: mcr.microsoft.com/dotnet/sdk:5.0
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Start .NET pipeline
+          script:
+            - echo "Starting pipeline..."
+      - step:
+          name: Clean
+          script:
+            - dotnet clean
+      - step:
+          name: Build .NET
+          script:
+            - dotnet build
+      - step:
+          name: Test .NET
+          script:
+            - dotnet test 
+      # - step:
+      #     image: node:16
+      #     name: 'Build app'
+      #     caches:
+      #       - node
+      #     script:
+      #       - cd SN-FE/
+      #       - npm install --quiet
+      #       - npm run build --progress=false
+      #     artifacts:
+      #       - dist/**
+      # - step:
+      #     name: 'Create zip'
+      #     script:
+      #       - tar czfv application.tar.tgz dist 
+      #     artifacts:
+      #       - application.tgz
+      # - step:
+      #     name: 'Deploy to Heroku in production'
+      #     deployment: production
+      #     script:
+      #       - pipe: atlassian/heroku-deploy:0.1.1
+      #         variables:
+      #           HEROKU_API_KEY: $HEROKU_API_KEY
+      #           HEROKU_APP_NAME: $HEROKU_APP_NAME
+      #           ZIP_FILE: "application.tgz"

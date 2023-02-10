@@ -1,0 +1,106 @@
+<body>
+    <div class = "center">
+    <h1 class = "register">Editar</h1>
+    <form class = "form" [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    
+      <div class="reg_areas_geral">
+        <h2 class="register">Informações gerais :</h2>
+    
+        <div class="txt_field" style="display: inline-block;">
+          <label for="nome">Nome</label>
+          <input id="nome" type="text" formControlName="nome">
+        </div>
+      
+        <div class="txt_field" style="display: inline-block;">
+          <label for="email">
+            E-Mail: 
+          </label>
+          <input id="email" type="email" formControlName="email">
+        </div>
+    
+        <div class="txt_field">
+          <label for="password">
+            Password: 
+          </label>
+          <input id="password" type="password" formControlName="password">
+        </div>
+    
+        <div class="txt_field">
+          <label for="avatar">
+            Avatar: 
+          </label>
+          <input id="avatar" type="text" formControlName="avatar">
+        </div>
+    
+      <div class="txt_field">
+          <label for="descricaoBreve">
+            Descrição Breve: 
+          </label>
+          <input id="descricaoBreve" type="text" formControlName="descricaoBreve">
+      </div>
+    
+      <div class="date_field">
+        <mat-form-field>
+            <mat-label for="dataNascimento" class="txt_field">
+              Data de Nascimento: 
+            </mat-label>
+            <input matInput [matDatepicker]="picker" id="" formControlName="dataNascimento">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+    
+        <div class="txt_field">
+          <label for="listaTags">
+            Tags: 
+          </label>
+          <input id="listaTags" type="text" formControlName="listaTags">
+      </div>
+    
+      </div>
+    
+      <div class="reg_areas_contactos">
+        <h2 class="register">Informações de contacto :</h2>
+        <div class="txt_field">
+          <label for="numeroTelefone">
+            Número de telefone: 
+          </label>
+          <input id="numeroTelefone" type="number" formControlName="numeroTelefone">
+        </div>
+    
+        <div class="txt_field">
+            <label for="URLLinkedIn">
+              LinkedIn: 
+            </label>
+            <input id="URLLinkedIn" type="text" formControlName="URLLinkedIn">
+        </div>
+    
+        <div class="txt_field">
+            <label for="URLFacebook">
+              Facebook: 
+            </label>
+            <input id="URLFacebook" type="text" formControlName="URLFacebook">
+        </div>
+    
+        <div class="txt_field">
+          <label for="pais">
+            País: 
+          </label>
+          <input id="pais" type="text" formControlName="pais">
+      </div>
+    
+        <div class="txt_field">
+          <label for="cidade">
+            Cidade: 
+          </label>
+          <input id="cidade" type="text" formControlName="cidade">
+      </div>
+      </div>
+    </form>
+    
+    <div class="bottom_buttons">
+      <button class="button" type="submit" (click)="onSubmit()">Editar</button>
+    </div>
+      
+    </div>
+    </body>

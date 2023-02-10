@@ -1,0 +1,41 @@
+<div>
+  <h1 class="title">Sugestões de amizade:</h1>
+
+  <table mat-table [dataSource]="sugestoes" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef> Nome </th>
+      <td mat-cell *matCellDef="let jogador"> {{jogador.nome}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef> E-Mail </th>
+      <td mat-cell *matCellDef="let jogador"> {{jogador.email}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="descricao">
+      <th mat-header-cell *matHeaderCellDef> Descrição</th>
+      <td mat-cell *matCellDef="let jogador "> {{jogador.descricaoBreve}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="dataNascimento">
+      <th mat-header-cell *matHeaderCellDef> Data de nascimento</th>
+      <td mat-cell *matCellDef="let jogador "> {{jogador.dataNascimento}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="listaTags">
+      <th mat-header-cell *matHeaderCellDef> Tags</th>
+      <td mat-cell *matCellDef="let jogador "> {{jogador.listaTags}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> Actions </th>
+      <td mat-cell *matCellDef="let jogador">
+        <button mat-raised-button (click)="adicionar(jogador)">Enviar Pedido</button>
+      </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

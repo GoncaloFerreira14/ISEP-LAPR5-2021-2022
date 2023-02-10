@@ -1,0 +1,28 @@
+<body>
+    <h3 class = "n_utilizadores">Número utilizadores na rede: {{utilizadores}}</h3>
+    <div class="center">
+        <h1 class="login">Login</h1>
+        <form>
+            <div class="txt_field">
+                <input type="text" id="email" required>
+                <span></span>
+                <label>Email</label>
+            </div>
+            <div class="txt_field">
+                <input type="password" id="pass" required>
+                <span></span>
+                <label>Password</label>
+            </div>
+            <div class="login_spinner" *ngIf="loggingIn" style="margin-left:10px">
+                <mat-spinner style="margin:0 auto;" [diameter]="50"></mat-spinner>
+            </div>
+            <button type="submit" (click)="validarLogin()" value="Login">Login</button>
+            <div class="registar_link">
+                Não registado? <a routerLink="/registar jogador">Registar</a>
+            </div>
+            <div class="Utilizador_nao_autenticado">
+              <a routerLink="/nao_autenticado">Entrar como utilizador não autenticado</a>
+            </div>
+        </form>
+    </div>
+</body>

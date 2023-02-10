@@ -1,0 +1,10 @@
+<h1>Estatisticas:</h1>
+
+<table mat-table [dataSource]="empData">
+  <ng-container matColumnDef="fortalezaRede">
+    <th mat-header-cell *matHeaderCellDef> Fortaleza da Rede </th>
+    <td mat-cell *matCellDef="let emp"> {{emp}} </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let emprow; columns: displayedColumns;"></tr>
+</table>

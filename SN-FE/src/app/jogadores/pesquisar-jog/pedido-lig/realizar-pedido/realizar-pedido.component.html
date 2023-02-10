@@ -1,0 +1,22 @@
+<body>
+    <div class = "center">
+    <h1 class = "register">Efetuar Pedido Ligação</h1>
+    <form class = "form" [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    
+      <div class="geral">      
+    
+        <div class="txt_field">
+          <label for=" msgIntermedio"> Mensagem para o jogador Objetivo: </label>
+          <input id=" msgIntermedio" type="text" formControlName="msgObjetivo">
+        </div>
+
+    
+      </div>
+    </form>
+    
+    <div class="bottom_buttons">
+      <button class="button" type="submit" (click)="onSubmit()">Efetuar Pedido de Ligação</button>
+    </div>
+      
+    </div>
+    </body>

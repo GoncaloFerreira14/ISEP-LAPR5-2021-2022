@@ -1,0 +1,139 @@
+<head>
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="logo_content">
+      <div class="logo">
+        <i class='bx bx-network-chart'></i>
+        <div class="logo_name">Social Network</div>
+      </div>
+    </div>
+    <ul class="nav_list">
+      <li>
+        <form class="form" [formGroup]="pesqForm" (ngSubmit)="onSubmit()">
+
+
+          <div class="txt_field">
+            <input class="pesquisarJog" id="pesquisa" type="text" formControlName="pesquisa">
+          </div>
+        </form>
+
+        <div class="imgPesq">
+          <span class="links_name" (click)="onSubmit()"><i class='bx bx-search'></i></span>
+        </div>
+      </li>
+      <li>
+        <i class='bx bx-joystick-alt'></i>
+        <span class="links_name" (click)="goToRede()">Rede</span>
+      </li>
+      <li>
+        <i class='bx bx-repost'></i>
+        <span class="links_name" (click)="goToPosts()">Posts</span>
+      </li>
+      <!--
+       <li>
+        <i class='bx bx-search'></i>
+        <span class="links_name" (click)="goToPesquisarJogadores()">Pesquisar Jogadores</span>
+      </li> 
+      -->
+      
+      <li>
+        <i class='bx bx-user'></i>
+        <span class="links_name" (click)="goToGetJogador()">Jogador</span>
+      </li>
+      <li>
+        <i class='bx bx-group'></i>
+        <span class="links_name" (click)="goToSugestoes()">Sugestões de amizade</span>
+      </li>
+      <li>
+        <i class='bx bxs-group'></i>
+        <span class="links_name" (click)="goToAmigosComuns()">Amigos em comum</span>
+      </li>
+      <li>
+        <i class='bx bx-network-chart'></i>
+        <span class="links_name" (click)="goToRelacoes()">Relações</span>
+      </li>
+      <li>
+        <i class='bx bx-smile'></i>
+        <span class="links_name" (click)="goToGetEstado()">Estado Emocional</span>
+      </li>
+      <li>
+        <i class='bx bx-mail-send'></i>
+        <span class="links_name" (click)="goToPedidos()">Pedidos</span>
+      </li>
+      <li>
+        <i class='bx bx-target-lock'></i>
+        <span class="links_name" (click)="goToAddPedidosIntroducao()">Missão</span>
+      </li>
+      <li>
+        <i class='bx bx-code-block'></i>
+        <span class="links_name" (click)="goToAlgoritmos()">Algoritmos</span>
+      </li>
+      <li>
+        <i class='bx bxs-bar-chart-alt-2'></i>
+        <span class="links_name" (click)="goToEstatisticas()">Estatisticas</span>
+      </li>
+
+
+    </ul>
+    <div class="profile_content">
+      <div class="profile">
+        <div class="profile_details">
+          <img src="assets/profile.png" alt="">
+          <div class="name">
+            {{jogador.nome}}
+          </div>
+        </div>
+        <a (click)="goToLogin()">
+          <i class='bx bx-log-out' id="log_out"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="home_content">
+    <router-outlet></router-outlet>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <ul class="navbar-nav">
+
+  <li>
+    <button (click)= "goToGetEstado()"
+      class="m-1 btn btn-light  btn-outline-primary" Button>
+      Editar Estado Emocional
+    </button>
+    </li>
+
+    <li class="nav-item">
+      <button routerLink="/sugerir jogadores"
+      class="m-1 btn btn-light  btn-outline-primary" Button>
+      Sugestões de amizade
+    </button>
+    </li>
+
+    <li class="nav-item">
+      <button routerLink="/pedidos introducao"
+      class="m-1 btn btn-light  btn-outline-primary" Button>
+      Ver Pedidos de Introdução
+    </button>
+    </li>
+
+    <li>
+    <button (click)= "goToGetRelacoes()"
+      class="m-1 btn btn-light  btn-outline-primary" Button>
+      Editar Relação
+    </button>
+    </li>
+</ul> -->
+</body>

@@ -1,0 +1,68 @@
+<body>
+    <h1>Perfil Jogador</h1>
+    <div class="center">
+        <div class="informacoes_areas_geral">
+            <div class="txt_field">
+                <label for="nome">
+                    Nome: {{jogadorAtivo.nome}}
+                </label>
+            </div>
+            <div class="txt_field">
+                <label for="email">
+                    Email: {{jogadorAtivo.email}}
+                </label>
+            </div>
+            <div class="txt_field">
+                <label for="password">
+                    Password: {{jogadorAtivo.password}}
+                </label>
+            </div>
+            <div class="txt_field">
+                <label for="cidade">
+                    Cidade: {{jogadorAtivo.cidade}}
+                </label>
+            </div>
+            <div class="txt_field">
+                <label for="pais">
+                    País: {{jogadorAtivo.pais}}
+                </label>
+            </div>
+            <div class="txt_field">
+                <label for="avatar">
+                    Avatar: {{jogadorAtivo.avatar}}
+                </label>
+            </div>
+            <div class="txt_field">
+                <label for="dataNascimento">
+                    Data Nascimento: {{jogadorAtivo.dataNascimento}}
+                </label>
+            </div>
+            <div class="txt_field">
+                <label for="numeroTelefone">
+                    Número Telefone: {{jogadorAtivo.numeroTelefone}}
+                </label>
+            </div>
+            <div class="txt_field">
+                <label for="URLLinkedIn">
+                    LinkedIn: {{jogadorAtivo.URLLinkedIn}}
+                </label>
+            </div>
+            <div class="txt_field">
+                <label for="URLFacebook">
+                    Facebook: {{jogadorAtivo.URLFacebook}}
+                </label>
+            </div>
+            <div class="txt_field">
+                <label for="descricaoBreve">
+                    Descrição Breve: {{jogadorAtivo.descricaoBreve}}
+                </label>
+            </div>
+        </div>
+        <div class="editar">
+      
+            <button type="editar" (click)="editProfile()"><b>Editar Perfil</b></button>
+            <button type="editar" (click)="goToApagarConta()"><b>Apagar Conta</b></button>
+        <mat-divider></mat-divider>
+          </div>
+    </div>
+</body>

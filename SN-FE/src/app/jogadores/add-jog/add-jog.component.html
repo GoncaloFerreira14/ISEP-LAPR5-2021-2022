@@ -1,0 +1,130 @@
+<body>
+  <div class="center">
+    <h1 class="register">Registar</h1>
+    <form class="form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+      <div class="reg_areas_geral">
+        <h2 class="register">Informações gerais :</h2>
+
+        <table cellspacing="0"><tr>
+          <td><mat-form-field appearence="outline">
+            <mat-label>Nome</mat-label>
+            <input matInput id="nome" type="text" formControlName="nome">
+          </mat-form-field></td>
+          <td><mat-form-field appearence="outline">
+            <mat-label for="email">
+              E-Mail
+            </mat-label>
+            <input matInput id="email" type="email" formControlName="email">
+          </mat-form-field></td>
+        </tr></table>
+
+        <p>
+          <mat-form-field appearence = "fill">
+            <mat-label>Password</mat-label>
+            <input matInput id="password" type="password" formControlName="password">
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field appearence = "fill">
+            <mat-label>Avatar</mat-label>
+            <input matInput id="avatar" type="text" formControlName="avatar">
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field appearence = "fill">
+            <mat-label>Descrição Breve</mat-label>
+            <input matInput id="descricaoBreve" type="text" formControlName="descricaoBreve">
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field>
+            <mat-label for="dataNascimento">Data de Nascimento</mat-label>
+            <input matInput [matDatepicker]="picker" id="dataNascimento" formControlName="dataNascimento">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field appearence = "fill">
+            <mat-label>Lista de Tags</mat-label>
+            <textarea matInput id="listaTags" formControlName="listaTags"></textarea>
+            <mat-hint align="start"><strong>As Tags são delimitadas por " , "</strong> </mat-hint>
+          </mat-form-field>
+        </p>
+
+        <mat-form-field appearence="fill">
+          <mat-label for="estadoHumor" class="txt_field">
+            Estado de Humor:
+          </mat-label>
+          <select matNativeControl required name="estadoHumor" id="estadoHumor" formControlName="estadoHumor">
+            <option value="joyful">Joyful</option>
+            <option value="distressed">Distressed</option>
+            <option value="hopeful">Hopeful</option>
+            <option value="fearful">Fearful</option>
+            <option value="relieved">Relieved</option>
+            <option value="disappointed">Disappointed</option>
+            <option value="proud">Proud</option>
+            <option value="remorseful">Remorseful</option>
+            <option value="grateful">Grateful</option>
+            <option value="angry">Angry</option>
+            <option value="neutral">Neutral</option>
+          </select>
+        </mat-form-field>
+      </div>
+
+      <div class="reg_areas_contactos">
+        <h2 class="register">Informações de contacto :</h2>
+
+        <p>
+          <mat-form-field appearence = "fill">
+            <mat-label>Número de Telefone</mat-label>
+            <input matInput id="numeroTelefone" type="number" formControlName="numeroTelefone">
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field appearence = "fill">
+            <mat-label>LinkedIn</mat-label>
+            <input matInput id="URLLinkedIn" type="text" formControlName="URLLinkedIn">
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field appearence = "fill">
+            <mat-label>Facebook</mat-label>
+            <input matInput id="URLFacebook" type="text" formControlName="URLFacebook">
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field appearence = "fill">
+            <mat-label>País</mat-label>
+            <input matInput id="pais" type="text" formControlName="pais">
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field appearence = "fill">
+            <mat-label>Cidade</mat-label>
+            <input matInput id="cidade" type="text" formControlName="cidade">
+          </mat-form-field>
+        </p>
+      </div>
+      
+    </form>
+    
+    <div class="bottom_buttons">
+      
+      <button class="button_others" type="submit"  (click)="termos()">Termos e Condições</button>
+      <button class="button" type="submit" (click)="onSubmit()">Registar</button>
+      <input class="button_others" type="reset">
+      <button class="button_others" routerLink="/login">Go Back</button>
+    </div>
+
+  </div>
+</body>

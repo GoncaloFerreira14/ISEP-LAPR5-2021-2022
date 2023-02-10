@@ -1,0 +1,60 @@
+<div class="page">
+    <h1 class="title">Definições de algoritmos de pesquisa:</h1>
+
+    <div>
+        <p>Considerar estado emocional na procura de caminhos:</p>
+        <mat-checkbox [(ngModel)]="necessita">Sim</mat-checkbox>
+    </div>
+    <div class="estadosHumor" *ngIf="necessita==true">
+        <mat-checkbox>
+            Joyful
+        </mat-checkbox>
+
+        <mat-checkbox>
+            Distressed
+        </mat-checkbox>
+
+        <mat-checkbox>
+            Hopeful
+        </mat-checkbox>
+
+        <mat-checkbox>
+            Fearful
+        </mat-checkbox>
+
+        <mat-checkbox>
+            Relieved
+        </mat-checkbox>
+
+        <mat-checkbox>
+            Disappointed
+        </mat-checkbox>
+
+        <mat-checkbox>
+            Proud
+        </mat-checkbox>
+
+        <mat-checkbox>
+            Remorseful
+        </mat-checkbox>
+
+        <mat-checkbox>
+            Grateful
+        </mat-checkbox>
+
+        <mat-checkbox>
+            Angry
+        </mat-checkbox>
+
+        <mat-checkbox>
+            Neutral
+        </mat-checkbox>
+    </div>
+
+    <button mat-raised-button (click)="onSubmit()">Guardar</button>
+<p>  {{this.ola.x}}</p>
+<p>  {{this.ola.y}}</p>
+<p>  {{this.ola2.x}}</p>
+<p>  {{this.ola2.y}}</p>
+<p>  {{this.ola3.x}}</p>
+</div>

@@ -1,0 +1,37 @@
+<body>
+  <div class="center">
+    <h1 class="register">Efetuar Pedido Introdução</h1>
+    <form class="form" [formGroup]="pedidoForm" (ngSubmit)="onSubmit()">
+
+      <div class="geral">
+
+
+        <div class="txt_field">
+          <label for="jogadorIntermedioEmail">Jogador Intermédio:</label>
+          <input id="jogadorIntermedioEmail" type="text" formControlName="jogadorIntermedioEmail">
+        </div>
+
+        <div class="txt_field">
+          <label for="jogadorObjetivoEmail"> Jogador Objetivo: </label>
+          <input id="jogadorObjetivoEmail" type="text" formControlName="jogadorObjetivoEmail">
+        </div>
+
+        <div class="txt_field">
+          <label for=" msgIntermedio"> Mensagem para o jogador intermédio: </label>
+          <input id=" msgIntermedio" type="text" formControlName="msgIntermedio">
+        </div>
+
+        <div class="txt_field">
+          <label for="msgObjetivo"> Mensagem para o jogador objetivo: </label>
+          <input id="msgObjetivo" type="text" formControlName="msgObjetivo">
+        </div>
+
+      </div>
+    </form>
+
+    <div class="bottom_buttons">
+      <button class="button" type="submit" (click)="onSubmit()">Efetuar Pedido de Introdução</button>
+    </div>
+
+  </div>
+</body>
